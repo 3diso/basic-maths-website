@@ -1,5 +1,5 @@
 [build]
-    publish = "public"
+    publish = "HTMLPage1.html"
     command = "echo No build command"
     node_bundler = "esbuild"
 
