@@ -1,1 +1,3 @@
 This is a basic math site made to practice html, css, javascript, and website creation.
+Site contents contains the files for building the webpage(html, css, js files)
+netifly.toml contains the instructions required for netlify to access/find the site contents file
