@@ -3,28 +3,34 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>  
       <title> maths website</title>
-      <link href="./css/styles.css" rel="stylesheet">
+      <link href="./styles.css" rel="stylesheet">
+      <script>
+        function submitanswer(questionNumber){
+        document.getElementById(`correct${questionNumber}`).style.color = 'green';
+        array = document.getElementsByClassName(`answer${questionNumber}`)
+        for (i=0;i<array.length;i++){
+          array[i].style.color = "red";
+        }
+          
+        }
+      </script>
   </head>
   
   <body>
     <h1>Math quiz</h1>
     <h3 class="question">What is 9x12?</h3>
-    <form action="changecolor()" method="get">
+    <form>
       <input type="radio" id="103" name="question1">
-      <label class="answer">103</label><br>
+      <label class="answer1">103</label><br>
       <input type="radio" value="112" name="question1">
-      <label class="answer">112</label><br>
+      <label class="answer1">112</label><br>
       <input type="radio" value="108" name="question1">
-      <label class="rightanswer" id="correct">108</label><br>
+      <label class="rightanswer1" id="correct1">108</label><br>
       <input type="radio" value="156" name="question1">
-      <label class="answer" >156</label><br><br>
+      <label class="answer1" >156</label><br><br>
       
-      <button type="button" onclick="changecolor()">Submit answer</button>
-      <script>
-        function changecolor(){
-          document.getElementById("correct").style.color = "darkgreen";
-        }
-      </script>
+      <button type="button" onclick="submitanswer(1)">Submit answer</button>
+      
     </form>
   </body>
 </html>
